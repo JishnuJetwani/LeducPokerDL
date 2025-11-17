@@ -44,6 +44,16 @@ The neural policy:
 
 ---
 
+___
+Cool resources I used:
+https://www.science.org/cms/asset/910714a7-ee2a-486e-9970-42fb893b08d9/pap.pdf
+https://vimeo.com/313942390
+https://www.youtube.com/watch?v=xrWulRY_t1o
+http://www.cs.cmu.edu/~sandholm/Solving%20games.Science-2015.pdf
+http://www.cs.cmu.edu/~sandholm/game%20abstraction.aaai15SMT.pdf
+http://www.cs.cmu.edu/~sandholm/solving%20games.aimag11.pdf
+
+
 ## Project Structure
 
 ```text
