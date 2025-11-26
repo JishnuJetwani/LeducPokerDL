@@ -1,6 +1,6 @@
-# Leduc Hold’em Poker Bot
+# Leduc Holdem Poker Bot
 
-A compact poker AI project built on Leduc Hold’em, a standard toy game in game-theory and RL research. 
+A poker AI project built on Leduc Holdem, a game used in game-theory and RL research. 
 - Implements a full 2-player fixed-limit Leduc environment.
 - Trains a tabular CFR solver to approximate a Nash equilibrium strategy.
 - Trains a neural PolicyNet to imitate the CFR strategy.
