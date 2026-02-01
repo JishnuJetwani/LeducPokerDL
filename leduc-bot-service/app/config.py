@@ -11,3 +11,9 @@ MODEL_PATH = Path(os.getenv("LEDUC_MODEL_PATH", TRAINING_DIR / "policy_net_leduc
 
 # API behavior
 DEFAULT_BOT_PLAYER = int(os.getenv("DEFAULT_BOT_PLAYER", "1"))
+
+# CORS
+ALLOWED_ORIGINS = os.getenv(
+    "ALLOWED_ORIGINS",
+    "http://localhost:5173,https://leducpokerbot.vercel.app",
+).split(",")

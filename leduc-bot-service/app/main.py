@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import select, func, desc
 from sqlalchemy.orm import Session
 
-from app.config import DEFAULT_BOT_PLAYER
+from app.config import DEFAULT_BOT_PLAYER, ALLOWED_ORIGINS
 from app.db import SessionLocal
 from app.game import deserialize_state, new_game_state, public_state_view, serialize_state
 from app.models import Action, Game, Hand
@@ -29,7 +29,7 @@ policy_engine: Optional[PolicyEngine] = None
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
