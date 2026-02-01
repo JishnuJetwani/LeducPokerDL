@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: leduc
+      POSTGRES_PASSWORD: leduc
+      POSTGRES_DB: leduc
+    ports:
+      - "5432:5432"
+    volumes:
+      - leduc_db_data:/var/lib/postgresql/data
+
+  api:
+    build:
+      context: ..
+      dockerfile: leduc-bot-service/Dockerfile
+    environment:
+      DATABASE_URL: postgresql+psycopg2://leduc:leduc@db:5432/leduc
+      LEDUC_TRAINING_DIR: /app/training
+      LEDUC_MODEL_PATH: /app/training/policy_net_leduc.pt
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    volumes:
+      - ./:/app/service
+      - ../leduc-bot-training:/app/training
+
+volumes:
+  leduc_db_data:
